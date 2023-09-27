@@ -35,36 +35,33 @@ elif 20<=edad<=25:
     edad="20-25"
 elif 26<=edad<=35 :
     edad="26-35"
-    elif 36<=edad<=45 :
-        edad="36-45"
+elif 36<=edad<=45 :
+    edad="36-45"
         
-    elif 46<=edad<=55:
-        edad="46-55"
-    elif 56<=edad<=65:
-        edad="56-65"
-    ingreso_anual=st.number_input("¿Cuánto ganas al año?",min_value=0)
-    if 0<ingreso_anual<25000:
+elif 46<=edad<=55:
+    edad="46-55"
+elif 56<=edad<=65:
+    edad="56-65"
+ingreso_anual=st.number_input("¿Cuánto ganas al año?",min_value=0)
+if 0<ingreso_anual<25000:
         ingreso_anual="Bajo"
-    elif 25000<=ingreso_anual<50000:
+elif 25000<=ingreso_anual<50000:
         ingreso_anual="Medio-Bajo"
-    elif 50000<=ingreso_anual<75000:
+elif 50000<=ingreso_anual<75000:
         ingreso_anual="Medio-Alto"
-    elif ingreso_anual>=75000:
+elif ingreso_anual>=75000:
         ingreso_anual="Alto"
-    monto_credito=st.number_input("Ingresa el valor del crédito deseado",min_value=0)
-    if 0<monto_credito<=5000:
+monto_credito=st.number_input("Ingresa el valor del crédito deseado",min_value=0)
+if 0<monto_credito<=5000:
         monto_credito="Pequeño"
-    elif 5000<monto_credito<=10000:
+elif 5000<monto_credito<=10000:
         monto_credito="Mediano"
-    elif 10000<monto_credito<=15000:
+elif 10000<monto_credito<=15000:
         monto_credito="Grande"
-    elif monto_credito>15000:
+elif monto_credito>15000:
         monto_credito="Muy Grande"
         
-    interes_deseado=st.number_input("¿A qué tasa de interés deseas tomarlo?",key=float,min_value=0.0)
-    tipo_vivienda=st.selectbox('¿En qué tipo de vivienda vives?',('Propia', 'Arrendada', 'Hipotecada'),placeholder="Escoge una opción")
-    loan_grade=st.selectbox("¿Cuál es tu calificación crediticia?",("A","B","C","D","F"))
-    anos_empleo=st.number_input("¿Cuántos años llevas en tu trabajo actual?",min_value=0)
-
-
-
+interes_deseado=st.number_input("¿A qué tasa de interés deseas tomarlo?",key=float,min_value=0.0)
+tipo_vivienda=st.selectbox('¿En qué tipo de vivienda vives?',('Propia', 'Arrendada', 'Hipotecada'),placeholder="Escoge una opción")
+loan_grade=st.selectbox("¿Cuál es tu calificación crediticia?",("A","B","C","D","F"))
+anos_empleo=st.number_input("¿Cuántos años llevas en tu trabajo actual?",min_value=0)
