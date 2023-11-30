@@ -27,7 +27,39 @@ with st.sidebar:
     selected
 
 if selected=="Video Tutorial":
+    st.write(
+        "En la era digital actual, comprender y gestionar tu salud financiera es más crucial que nunca. "
+        "Camilo Andrés Granada Mejía, estudiante de ingeniería administrativa, y Alejandro Zapata Quintero, "
+        "estudiante de ingeniería de sistemas, nos complacemos en presentar 'Credit Score', tu puerta de acceso a "
+        "un conocimiento profundo de tu historial crediticio."
+    )
+
+    st.write(
+        "Nuestra plataforma ha sido cuidadosamente diseñada con el propósito de simplificar el proceso de evaluación "
+        "crediticia. ¿Te preguntas cuál es tu score crediticio? ¿Cómo impacta en tus posibilidades financieras? Estamos "
+        "aquí para proporcionarte respuestas claras y valiosas."
+    )
+
+    st.write(
+        "Gracias a la combinación de la experiencia en ingeniería administrativa y de sistemas, hemos creado una herramienta "
+        "intuitiva que te permite ingresar tus datos financieros de manera segura y obtener un análisis instantáneo de tu score "
+        "crediticio. No importa si eres estudiante, profesional o empresario, 'Credit Score' está aquí para empoderarte con "
+        "información precisa y útil sobre tu salud crediticia."
+    )
+
+    st.write(
+        "Descubre la clave para tomar decisiones financieras informadas. Únete a nosotros en 'Credit Score' y da el primer paso "
+        "hacia un futuro financiero más sólido. ¡Tu éxito financiero comienza aquí!"
+    )
     st.video("https://www.youtube.com/watch?v=33wNNT4QXSk")
+    
+    st.caption(
+        "**Tratamiento de Datos en Cumplimiento con la Ley Colombiana**\n\n"
+        "En 'Credit Score', nos tomamos en serio la privacidad y seguridad de tus datos. "
+        "En cumplimiento con la legislación colombiana, especialmente la Ley Estatutaria 1581 de 2012, "
+        "reguladora del derecho fundamental de habeas data y otras disposiciones, garantizamos un tratamiento "
+        "transparente y responsable de la información que compartes con nosotros."
+    )
 
 elif selected=="Ingresa tus datos" :
     edad=st.number_input("Ingresa tu edad",key=int,min_value=0)
@@ -95,4 +127,14 @@ elif selected=="Ingresa tus datos" :
             return score
     score_final=score(edad,home,income)
     if st.button("Calcular mi Score"):
+        import time
+        with st.spinner('Calculando meticulosamente...'):
+            time.sleep(5)
         st.info(f"Tu Credit Scores es de: {score_final} ")
+    st.caption(
+        "**Tratamiento de Datos en Cumplimiento con la Ley Colombiana**\n\n"
+        "En 'Credit Score', nos tomamos en serio la privacidad y seguridad de tus datos. "
+        "En cumplimiento con la legislación colombiana, especialmente la Ley Estatutaria 1581 de 2012, "
+        "reguladora del derecho fundamental de habeas data y otras disposiciones, garantizamos un tratamiento "
+        "transparente y responsable de la información que compartes con nosotros."
+    )
